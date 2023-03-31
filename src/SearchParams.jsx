@@ -9,7 +9,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState('')
   const [breed, setBreed] = useState('')
   const [pets, setPets] = useState([])
-  const { breedList } = useBreedList(animal)
+  const [ breedList ] = useBreedList(animal)
 
   useEffect(() => {
     requestPets()
