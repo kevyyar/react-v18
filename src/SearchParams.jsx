@@ -46,13 +46,16 @@ const SearchParams = () => {
                         type="text"
                         id="location"
                         name="location"
-                        placeholder="Location" />
+                        placeholder="Location"
+                        className='mb-5 block w-60'
+                    />
                 </label>
                 <label htmlFor="animal">
                     Animal
                     <select
                         id="animal"
                         value={animal}
+                        className='mb-5 block w-60'
                         onChange={
                             (e) => {
                                 setAnimal(e.target.value)
@@ -69,6 +72,7 @@ const SearchParams = () => {
                     <select
                         id="breed"
                         name="breed"
+                        className='mb-5 block w-60 disabled:opacity-50'
                         disabled={breedList.length === 0}
                     >
                         <option />
@@ -77,7 +81,7 @@ const SearchParams = () => {
                         ))}
                     </select>
                 </label>
-                <button type="submit">Submit</button>
+                <button className='rounded px-6 py-2 text-white hover:opacity-50 border-none bg-orange-500' type="submit">Submit</button>
             </form>
             <Results pets={pets} />
         </div>
